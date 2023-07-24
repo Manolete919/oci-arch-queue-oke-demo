@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: queueoke
+  namespace: queue
   labels:
     app: queueoke
 spec:
@@ -15,15 +16,14 @@ spec:
     spec:
       containers:
       - name: queueoke
-        image: #image details
+        image: iad.ocir.io/id6dibaakt36/mgarciar/queueoke:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
         env:
             - name: DP_ENDPOINT
-              value: "<Data plane end point>"
+              value: "https://cell-1.queue.messaging.us-ashburn-1.oci.oraclecloud.com"
             - name: QUEUE_ID
-              value: "<queue ocid>"
+              value: "ocid1.queue.oc1.iad.amaaaaaaj6ty54aaabrmdjhf76p7fhyd3lev2exbvlxk4qoctwexn6dn2fna"
       imagePullSecrets:
-      - name: queueoke-secret #check secret.yaml
-        
+      - name: queueoke-secret

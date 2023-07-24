@@ -2,6 +2,7 @@ apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
   name: http-so
+  namespace: queue
   labels:
     deploymentName: queue-deployment-so
 spec:
@@ -16,5 +17,5 @@ spec:
     - type: metrics-api
       metadata:
         targetValue: "200"
-        url: "<api gateway url for queue length function>"
+        url: "https://e7fqri2v3weyzypanm6vzgqtmu.apigateway.us-ashburn-1.oci.customer-oci.com/queue/v1/getQueueStat"
         valueLocation: 'queue.visibleMessages'
