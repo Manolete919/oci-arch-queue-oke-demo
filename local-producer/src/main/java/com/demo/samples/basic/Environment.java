@@ -34,18 +34,17 @@ public class Environment {
 
 	// Data Plane API's endpoints for PHX, please replace it for other regions
 	
-	public static String _DP_ENDPOINT = "https://cell-1.queue.messaging.us-phoenix-1.oci.oraclecloud.com";
+	public static String _DP_ENDPOINT = "https://cell-1.queue.messaging.us-ashburn-1.oci.oraclecloud.com";
 
 	// values below are required if you are using user private key 
 	
-	public static String _TENANT_ID = "<Your tenancy ocid>";
-	public static String _USER_ID = "<user ocid>";
-	public static String _FINGER_PRINT = "<key fingerprint>";
-	public static String _PVT_KEY_FILE_PATH = "<absolute path of private>";
+	public static String _TENANT_ID = "ocid1.tenancy.oc1..aaaaaaaazk5fzn3nj4hrz5qgki6tdvhtzmkgggyspun5cyogx24bngwehgma";
+	public static String _USER_ID = "ocid1.user.oc1..aaaaaaaac4cyaor6ijegybc5ydcduevzwvyuu3g63i2dmrkz3nbssh2pxsaq";
+	public static String _FINGER_PRINT = "82:fb:77:26:d7:b7:fb:78:ee:2d:99:0f:9a:32:6a:92";
+	public static String _PVT_KEY_FILE_PATH = "~/.oci/oci_api_key.pem";
 
 	// Get the _QUEUE_ID after creating the Queue
-	public static String _QUEUE_ID = "<Your Queue OCID>";
-	
+	public static String _QUEUE_ID = "ocid1.queue.oc1.iad.amaaaaaaj6ty54aaabrmdjhf76p7fhyd3lev2exbvlxk4qoctwexn6dn2fna";
 
 	
 }

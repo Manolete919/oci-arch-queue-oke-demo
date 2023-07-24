@@ -1,1 +1,1 @@
-java -cp "queue-samples-jar-with-dependencies.jar" com.demo.samples.basic.GetStats
+java -cp java -cp "./target/queue-samples-jar-with-dependencies.jar" com.demo.samples.basic.GetStats
